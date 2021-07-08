@@ -41,7 +41,7 @@ static Parameter defconfig[ParameterLast] = {
 	[ShowIndicators]      =       { { .i = 0 },     },
 	[SiteQuirks]          =       { { .i = 1 },     },
 	[SmoothScrolling]     =       { { .i = 0 },     },
-	[SpellChecking]       =       { { .i = 0 },     },
+	[SpellChecking]       =       { { .i = 1 },     },
 	[SpellLanguages]      =       { { .v = ((char *[]){ "pt_BR", NULL }) }, },
 	[StrictTLS]           =       { { .i = 1 },     },
 	[Style]               =       { { .i = 1 },     },
