@@ -1,5 +1,6 @@
 #!/bin/sh
 
+read -p "Commit message: " message
 git add . 
-git commit -m "atualização de arquivos" 
+git commit -m "$message"
 git push -u origin master
