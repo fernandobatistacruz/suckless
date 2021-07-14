@@ -15,8 +15,8 @@ static char *cookiefile     = "~/.surf/cookies.txt";
  */
 static Parameter defconfig[ParameterLast] = {
 	/* parameter                    Arg value       priority */
-	[AccessMicrophone]    =       { { .i = 0 },     },
-	[AccessWebcam]        =       { { .i = 0 },     },
+	[AccessMicrophone]    =       { { .i = 1 },     },
+	[AccessWebcam]        =       { { .i = 1 },     },
 	[Certificate]         =       { { .i = 0 },     },
 	[CaretBrowsing]       =       { { .i = 0 },     },
 	[CookiePolicies]      =       { { .v = "@Aa" }, },
@@ -25,7 +25,7 @@ static Parameter defconfig[ParameterLast] = {
 	[DNSPrefetch]         =       { { .i = 0 },     },
 	[Ephemeral]           =       { { .i = 0 },     },
 	[FileURLsCrossAccess] =       { { .i = 0 },     },
-	[FontSize]            =       { { .i = 14 },    },
+	[FontSize]            =       { { .i = 18},     },
 	[FrameFlattening]     =       { { .i = 0 },     },
 	[Geolocation]         =       { { .i = 0 },     },
 	[HideBackground]      =       { { .i = 0 },     },
@@ -45,7 +45,7 @@ static Parameter defconfig[ParameterLast] = {
 	[SpellLanguages]      =       { { .v = ((char *[]){ "pt_BR", NULL }) }, },
 	[StrictTLS]           =       { { .i = 1 },     },
 	[Style]               =       { { .i = 1 },     },
-	[WebGL]               =       { { .i = 0 },     },
+	[WebGL]               =       { { .i = 1 },     },
 	[ZoomLevel]           =       { { .f = 1.0 },   },
 };
 
