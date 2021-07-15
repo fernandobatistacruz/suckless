@@ -1,6 +1,7 @@
 #!/bin/sh
 
 icone=""
+network=""
 
 if [ `uname` == "FreeBSD" ] 
 then
@@ -9,9 +10,8 @@ else
     network=`ip link show dev wlan0 | grep 'state UP' | awk '{print $9}'`
 fi
 
-if [ $network z ] 
-then 
-    icone="" 
+if [ -z $network ]; then 
+   icone="" 
 fi   
    
 echo "" $icone ""

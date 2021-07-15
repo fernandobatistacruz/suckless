@@ -1,12 +1,13 @@
 #!/bin/sh
+suckless=""
+dotfiles=""
 
 suckless=`cd ~/suckless && git status | grep 'nothing to commit, working tree clean' | awk '{print $1}'`
 dotfiles=`cd ~/dotfiles && git status | grep 'nothing to commit, working tree clean' | awk '{print $1}'`
 
 icone=""
 
-if [ $suckless z ] || [ $dotfiles z ]
-then 
+if [ -z $suckless ] || [ -z $dotfiles ]; then
    icone="+"
 fi
     
