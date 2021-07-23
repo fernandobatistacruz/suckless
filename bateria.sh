@@ -23,4 +23,4 @@ then
     icone=""
 fi
     
-echo $icone" "$bateria% "" 
+echo " $icone $bateria%" 

@@ -14,4 +14,4 @@ if [ -z $network ]; then
    icone="" 
 fi   
    
-echo "" $icone ""
+echo " $icone"

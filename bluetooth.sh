@@ -12,5 +12,5 @@ fi
 if [ -z $icone ]; then
    echo $icone
 else
-   echo " "$icone
+   echo " $icone"
 fi
