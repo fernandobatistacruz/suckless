@@ -26,7 +26,7 @@ static Parameter defconfig[ParameterLast] = {
 	[Ephemeral]           =       { { .i = 0 },     },
 	[FileURLsCrossAccess] =       { { .i = 0 },     },
 	[FontSize]            =       { { .i = 15},     },
-	[FrameFlattening]     =       { { .i = 0 },     },
+	[FrameFlattening]     =       { { .i = 1 },     },
 	[Geolocation]         =       { { .i = 0 },     },
 	[HideBackground]      =       { { .i = 0 },     },
 	[Inspector]           =       { { .i = 1 },     },
