@@ -62,10 +62,10 @@ static const char unknown_str[] = "";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function     format     argument */
-    { run_command,  "%s",      "~/suckless/cpu.sh" }, 
+	/* function     format     argument */       
     { run_command,  "%s",      "~/suckless/bluetooth.sh" },       
     { run_command,  "%s",      "~/suckless/git-status.sh" },
+    { run_command,  "%s",      "~/suckless/cpu.sh" }, 
     { run_command,  "%s",      "~/suckless/network.sh" },
     { run_command,  "%s",      "~/suckless/bateria.sh" },
     { run_command,  "%s",      "~/suckless/volume.sh" },    
