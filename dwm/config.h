@@ -92,7 +92,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ 0,                            XK_Print,  spawn,          SHCMD("sleep 1s; scrot -q 100") },
+	{ 0,                            XK_Print,  spawn,          SHCMD("scrot -s -q 100") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("pulsemixer --change-volume +1") },
     { MODKEY,                       XK_r,      spawn,          SHCMD("pulsemixer --change-volume -1") },
     { MODKEY,                       XK_s,      spawn,          SHCMD("tabbed -c surf -e") } , 
