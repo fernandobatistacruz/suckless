@@ -6,7 +6,7 @@ static const unsigned int gappx     = 0;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Monospace:size=14", "FontAwesome:pixelsize=17:antialias=true:autohint=true" };
+static const char *fonts[]          = { "Droid Sans Mono:size=14", "FontAwesome:pixelsize=18:antialias=true:autohint=true" };
 static const char dmenufont[]       = "Monospace:size=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
