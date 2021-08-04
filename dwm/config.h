@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Droid Sans Mono:size=14", "FontAwesome:pixelsize=18:antialias=true:autohint=true" };
-static const char dmenufont[]       = "Monospace:size=14";
+static const char dmenufont[]       = "Droid Sans Mono:size=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -97,7 +97,8 @@ static Key keys[] = {
     { MODKEY,                       XK_r,      spawn,          SHCMD("pulsemixer --change-volume -1") },
     { MODKEY,                       XK_s,      spawn,          SHCMD("tabbed -c surf -e") } , 
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") } , 
-	TAGKEYS(                        XK_1,                      0)
+	{ MODKEY,                       XK_q,      spawn,          SHCMD("quit") } ,
+    TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
