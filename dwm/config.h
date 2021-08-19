@@ -13,8 +13,8 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const unsigned int baralpha = 210;
-static const unsigned int borderalpha = 210;
+static const unsigned int baralpha = 235;
+static const unsigned int borderalpha = 235;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -52,6 +52,11 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
+#define XF86MonBrightnessDown		0x1008ff03
+#define XF86MonBrightnessUp			0x1008ff02
+#define XF86AudioMute				0x1008ff12
+#define XF86AudioLowerVolume		0x1008ff11
+#define XF86AudioRaiseVolume		0x1008ff13
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
