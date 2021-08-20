@@ -69,5 +69,5 @@ static const struct arg args[] = {
     { run_command,  "%s",      "~/suckless/network.sh" },
     { run_command,  "%s",      "~/suckless/bateria.sh" },
     { run_command,  "%s",      "~/suckless/volume.sh" },    
-	{ datetime,     "%s",      " %d/%m/%Y %R " },
+	{ datetime,     "%s",      "  %d/%m/%Y %R " },
 };
