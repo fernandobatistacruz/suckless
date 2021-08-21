@@ -1,12 +1,6 @@
 #!/bin/sh
 
-if [ `uname` == "FreeBSD" ]
-then
-    bateria=`sysctl hw.acpi.battery.life | cut -d ':' -f 2`
-else
-    bateria=`cat /sys/class/power_supply/BAT0/capacity`
-fi
-
+bateria=`cat /sys/class/power_supply/BAT0/capacity`
 icone=""
 
 if [ $bateria -lt 20 ]  
