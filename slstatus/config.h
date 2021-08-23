@@ -4,7 +4,7 @@
 const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
-static const char unknown_str[] = "";
+static const char unknown_str[] = "n/a";
 
 /* maximum output string length */
 #define MAXLEN 2048
@@ -45,6 +45,7 @@ static const char unknown_str[] = "";
  * ram_total           total memory size in GB         NULL
  * ram_used            used memory in GB               NULL
  * run_command         custom shell command            command (echo foo)
+ * separator           string to echo                  NULL
  * swap_free           free swap in GB                 NULL
  * swap_perc           swap usage in percent           NULL
  * swap_total          total swap size in GB           NULL
@@ -58,16 +59,18 @@ static const char unknown_str[] = "";
  * uptime              system uptime                   NULL
  * username            username of current user        NULL
  * vol_perc            OSS/ALSA volume in percent      mixer file (/dev/mixer)
+ *                                                     NULL on OpenBSD
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function     format     argument */       
-    { run_command,  "%s",      "~/suckless/bluetooth.sh" },       
-    { run_command,  "%s",      "~/suckless/git-status.sh" },
-    { run_command,  "%s",      "~/suckless/cpu.sh" }, 
-    { run_command,  "%s",      "~/suckless/network.sh" },
-    { run_command,  "%s",      "~/suckless/bateria.sh" },
-    { run_command,  "%s",      "~/suckless/volume.sh" },    
-	{ datetime,     "%s",      "  %d/%m/%Y %R " },
+    /* function     format     argument */
+    { run_command,  "%s",      "~/suckless.org/bluetooth.sh" },
+    { run_command,  "%s",      "~/suckless.org/git-status.sh" },
+    { run_command,  "%s",      "~/suckless.org/cpu.sh" },
+    { run_command,  "%s",      "~/suckless.org/network.sh" },
+    { run_command,  "%s",      "~/suckless.org/bateria.sh" },
+    { run_command,  "%s",      "~/suckless.org/volume.sh" },
+    { datetime,     "%s",      "  %d/%m/%Y %R " },
 };
+

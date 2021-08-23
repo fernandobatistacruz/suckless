@@ -59,12 +59,11 @@ const char *run_command(const char *cmd);
 /* separator */
 const char *separator(const char *separator);
 
-/*
+/* swap */
 const char *swap_free(void);
 const char *swap_perc(void);
 const char *swap_total(void);
 const char *swap_used(void);
-*/
 
 /* temperature */
 const char *temp(const char *);
