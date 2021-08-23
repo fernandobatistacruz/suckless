@@ -65,12 +65,12 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
     /* function     format     argument */
-    { run_command,  "%s",      "~/suckless.org/bluetooth.sh" },
-    { run_command,  "%s",      "~/suckless.org/git-status.sh" },
-    { run_command,  "%s",      "~/suckless.org/cpu.sh" },
-    { run_command,  "%s",      "~/suckless.org/network.sh" },
-    { run_command,  "%s",      "~/suckless.org/bateria.sh" },
-    { run_command,  "%s",      "~/suckless.org/volume.sh" },
+    { run_command,  "%s",      "~/suckless/bluetooth.sh" },
+    { run_command,  "%s",      "~/suckless/git-status.sh" },
+    { run_command,  "%s",      "~/suckless/cpu.sh" },
+    { run_command,  "%s",      "~/suckless/network.sh" },
+    { run_command,  "%s",      "~/suckless/bateria.sh" },
+    { run_command,  "%s",      "~/suckless/volume.sh" },
     { datetime,     "%s",      "  %d/%m/%Y %R " },
 };
 
