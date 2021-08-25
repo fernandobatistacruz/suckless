@@ -69,8 +69,16 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *dmenucmd[]      = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *termcmd[]       = { "st", NULL };
+static const char *firefoxcmd[]    = { "firefox", NULL };
+static const char *scrotcmd[]      = { "scrot", "-s", "-f", "-q", "100", NULL };
+static const char *slockcmd[]      = { "slock", NULL };
+static const char *lightdowncmd[]  = { "light", "-U", "1", NULL };
+static const char *lightupcmd[]    = { "light", "-A", "1", NULL };
+static const char *audiomutecmd[]  = { "pulsemixer", "--toggle-mute", NULL };
+static const char *audioupcmd[]    = { "pulsemixer", "--change-volume", "+5", NULL };
+static const char *audiodowncmd[]  = { "pulsemixer", "--change-volume" ,"-5", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -97,14 +105,14 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-    { MODKEY,                       XK_s,      spawn,          SHCMD("firefox") } ,
-    { 0,                            XK_Print,  spawn,          SHCMD("scrot -s -f -q 100") },
-    { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") } ,
-    { 0,            XF86MonBrightnessDown,     spawn,          SHCMD("light -U 1") },
-    { 0,            XF86MonBrightnessUp,       spawn,          SHCMD("light -A 1") },
-    { 0,            XF86AudioMute,             spawn,          SHCMD("pulsemixer --toggle-mute") },
-    { 0,            XF86AudioRaiseVolume,      spawn,          SHCMD("pulsemixer --change-volume +5") },
-    { 0,            XF86AudioLowerVolume,      spawn,          SHCMD("pulsemixer --change-volume -5") },
+    { MODKEY,                       XK_s,      spawn,          {.v = firefoxcmd } },
+    { 0,                            XK_Print,  spawn,          {.v = scrotcmd } },
+    { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
+    { 0,            XF86MonBrightnessDown,     spawn,          {.v = lightdowncmd } },
+    { 0,            XF86MonBrightnessUp,       spawn,          {.v = lightupcmd } },
+    { 0,            XF86AudioMute,             spawn,          {.v = audiomutecmd } },
+    { 0,            XF86AudioRaiseVolume,      spawn,          {.v = audioupcmd } },
+    { 0,            XF86AudioLowerVolume,      spawn,          {.v = audiodowncmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
