@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Droid Sans Mono:size=14", "FontAwesome:pixelsize=19:antialias=true:autohint=true" };
-static const char dmenufont[]       = "Droid Sans Mono:size=14";
+static const char *fonts[]          = { "Monospace:size=13", "FontAwesome:pixelsize=19:antialias=true:autohint=true" };
+static const char dmenufont[]       = "Monospace:size=13";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -105,14 +105,14 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-    { MODKEY,                       XK_s,      spawn,          {.v = firefoxcmd } },
-    { 0,                            XK_Print,  spawn,          {.v = scrotcmd } },
-    { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
-    { 0,            XF86MonBrightnessDown,     spawn,          {.v = lightdowncmd } },
-    { 0,            XF86MonBrightnessUp,       spawn,          {.v = lightupcmd } },
-    { 0,            XF86AudioMute,             spawn,          {.v = audiomutecmd } },
-    { 0,            XF86AudioRaiseVolume,      spawn,          {.v = audioupcmd } },
-    { 0,            XF86AudioLowerVolume,      spawn,          {.v = audiodowncmd } },
+        { MODKEY,                       XK_s,      spawn,          {.v = firefoxcmd } },
+        { 0,                            XK_Print,  spawn,          {.v = scrotcmd } },
+        { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
+        { 0,            XF86MonBrightnessDown,     spawn,          {.v = lightdowncmd } },
+        { 0,            XF86MonBrightnessUp,       spawn,          {.v = lightupcmd } },
+        { 0,            XF86AudioMute,             spawn,          {.v = audiomutecmd } },
+        { 0,            XF86AudioRaiseVolume,      spawn,          {.v = audioupcmd } },
+        { 0,            XF86AudioLowerVolume,      spawn,          {.v = audiodowncmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
