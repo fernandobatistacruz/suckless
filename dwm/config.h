@@ -12,7 +12,7 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const unsigned int baralpha = 245;
+static const unsigned int baralpha  = 245;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -105,14 +105,14 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-        { MODKEY,                       XK_s,      spawn,          {.v = firefoxcmd } },
-        { 0,                            XK_Print,  spawn,          {.v = scrotcmd } },
-        { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
-        { 0,            XF86MonBrightnessDown,     spawn,          {.v = lightdowncmd } },
-        { 0,            XF86MonBrightnessUp,       spawn,          {.v = lightupcmd } },
-        { 0,            XF86AudioMute,             spawn,          {.v = audiomutecmd } },
-        { 0,            XF86AudioRaiseVolume,      spawn,          {.v = audioupcmd } },
-        { 0,            XF86AudioLowerVolume,      spawn,          {.v = audiodowncmd } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = firefoxcmd } },
+	{ 0,                            XK_Print,  spawn,          {.v = scrotcmd } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
+	{ 0,            XF86MonBrightnessDown,     spawn,          {.v = lightdowncmd } },
+	{ 0,            XF86MonBrightnessUp,       spawn,          {.v = lightupcmd } },
+	{ 0,            XF86AudioMute,             spawn,          {.v = audiomutecmd } },
+	{ 0,            XF86AudioRaiseVolume,      spawn,          {.v = audioupcmd } },
+	{ 0,            XF86AudioLowerVolume,      spawn,          {.v = audiodowncmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -141,4 +141,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
