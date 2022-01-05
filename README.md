@@ -4,3 +4,6 @@ Customização Suckelles:
 - Scroll - Scroll for St.
 - Slock - Simplest X screen locker.
 - Slstatus - Status monitor for window managers.
+
+- Device ThinkPad E14
+- SO Arch Linux
