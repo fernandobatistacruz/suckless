@@ -1,4 +1,4 @@
-Custom Suckelles Project https://suckless.org/
+Custom Suckles Project https://suckless.org/
 
 - DWM - Dynamic Window Manager for X.
 - St - Simple terminal implementation for X.
