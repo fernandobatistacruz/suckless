@@ -58,6 +58,7 @@ static const Layout layouts[] = {
 #define XF86AudioMute         0x1008ff12
 #define XF86AudioLowerVolume  0x1008ff11
 #define XF86AudioRaiseVolume  0x1008ff13
+#define XF86Tools             0x1008ff81
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
@@ -80,6 +81,7 @@ static const char *lightupcmd[]    = { "light", "-A", "1", NULL };
 static const char *audiomutecmd[]  = { "pulsemixer", "--toggle-mute", NULL };
 static const char *audioupcmd[]    = { "pulsemixer", "--change-volume", "+5", NULL };
 static const char *audiodowncmd[]  = { "pulsemixer", "--change-volume" ,"-5", NULL };
+static const char *toolscmd[]      = { "pcmanfm", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -114,6 +116,7 @@ static Key keys[] = {
 	{ 0,            XF86AudioMute,             spawn,          {.v = audiomutecmd } },
 	{ 0,            XF86AudioRaiseVolume,      spawn,          {.v = audioupcmd } },
 	{ 0,            XF86AudioLowerVolume,      spawn,          {.v = audiodowncmd } },
+    { 0,            XF86Tools,                 spawn,          {.v = toolscmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
