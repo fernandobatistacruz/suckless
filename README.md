@@ -1,4 +1,5 @@
-Customização Suckelles:
+Suckelles Project
+
 - DWM - Dynamic Window Manager for X.
 - St - Simple terminal implementation for X.
 - Scroll - Scroll for St.
