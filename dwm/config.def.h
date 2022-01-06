@@ -35,7 +35,6 @@ static const Rule rules[] = {
 	 */
 	/* class      instance                title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,                   NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,                   NULL,       1 << 8,       0,           -1 },
 	{ NULL,      "system-config-printer", NULL,       0,            1,           -1 },
 };
 
@@ -81,7 +80,7 @@ static const char *lightupcmd[]    = { "light", "-A", "1", NULL };
 static const char *audiomutecmd[]  = { "pulsemixer", "--toggle-mute", NULL };
 static const char *audioupcmd[]    = { "pulsemixer", "--change-volume", "+5", NULL };
 static const char *audiodowncmd[]  = { "pulsemixer", "--change-volume" ,"-5", NULL };
-static const char *toolscmd[]      = { "pcmanfm", NULL };
+static const char *toolscmd[]      = { "pcmanfm", "menu://applications/", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
