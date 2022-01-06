@@ -1,6 +1,8 @@
 # Suckless Project https://suckless.org
 
-## Minimal Custom: 
+
+## Minimal Custom
+
 
 - DWM - Dynamic Window Manager for X.
 - St - Simple terminal implementation for X.
