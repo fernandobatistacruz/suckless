@@ -11,4 +11,4 @@ if [ -z $suckless ] || [ -z $dotfiles ]; then
    icone="+"
 fi
     
-echo " $icone"
+echo "$icone"
