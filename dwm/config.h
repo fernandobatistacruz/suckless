@@ -37,6 +37,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,                   NULL,       0,            1,           -1 },
     { "Surf",     NULL,                   NULL,       1 << 8,       1,           -1 },
 	{ NULL,      "system-config-printer", NULL,       0,            1,           -1 },
+    { "vlc",      NULL,                   NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
