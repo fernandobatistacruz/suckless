@@ -7,5 +7,5 @@ if [ $mute -ge 1 ]
 then
    echo "Off"
 else
-   echo "$volume%"
+   echo " $volume%"
 fi
