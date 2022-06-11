@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Liberation Mono:pixelsize=17:antialias=true:autohint=true";
-static int borderpx = 4;
+static int borderpx = 2;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -150,8 +150,8 @@ static unsigned int cursorshape = 2;
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 100;
-static unsigned int rows = 30;
+static unsigned int cols = 80;
+static unsigned int rows = 24;
 
 /*
  * Default colour and shape of the mouse cursor
