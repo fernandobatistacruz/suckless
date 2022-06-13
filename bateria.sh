@@ -5,7 +5,7 @@ icone=""
 
 if [ $bateria -lt 10 ]
 then
-    icone=""  
+    icone=""
 elif [ $bateria -lt 20 ]
 then 
     icone=""
@@ -18,3 +18,9 @@ then
 fi
 
 echo "$icone $bateria%"
+
+if [ $bateria -lt 6 ]
+then
+    notify-send "Você tem $bateria% de bateria!" "Ligue o carregador." --icon=battery-low -t 15000
+  	sleep 120
+fi
