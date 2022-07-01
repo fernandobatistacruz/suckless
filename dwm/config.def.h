@@ -37,7 +37,7 @@ static const Rule rules[] = {
 	/* class      instance                title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,                   NULL,       0,            1,           -1 },
 	{ NULL,      "system-config-printer", NULL,       0,            1,           -1 },
-    { "vlc",      NULL,                   NULL,       0,            1,           -1 },
+	{ "vlc",      NULL,                   NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -109,9 +109,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-    { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
-    { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
-    { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = browsercmd } },
 	{ 0,                            XK_Print,  spawn,          {.v = scrotcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
@@ -120,7 +120,7 @@ static Key keys[] = {
 	{ 0,            XF86AudioMute,             spawn,          {.v = audiomutecmd } },
 	{ 0,            XF86AudioRaiseVolume,      spawn,          {.v = audioupcmd } },
 	{ 0,            XF86AudioLowerVolume,      spawn,          {.v = audiodowncmd } },
-    { 0,            XF86Tools,                 spawn,          {.v = toolscmd } },
+	{ 0,            XF86Tools,                 spawn,          {.v = toolscmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
