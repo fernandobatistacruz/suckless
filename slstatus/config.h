@@ -65,9 +65,9 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
     /* function     format     argument */
-    { run_command,  "  %s ",     "~/suckless/network.sh" },
-    { run_command,  "  %s ",     "~/suckless/volume.sh" },
-    { run_command,  "  %s ",     "~/suckless/bateria.sh" },   
-    { run_command,  "  %s  ",    "~/suckless/data.sh" },
+    { run_command,  "   %s",     "~/suckless/network.sh" },
+    { run_command,  "   %s",     "~/suckless/volume.sh" },
+    { run_command,  "   %s",     "~/suckless/bateria.sh" },   
+    { run_command,  "   %s  ",    "~/suckless/data.sh" },
 };
 
