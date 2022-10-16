@@ -1487,7 +1487,7 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
 
 	/* Intelligent cleaning up of the borders. */
 	if (x == 0) {
-		xclear(0, (y == 0)? 0 : winy, win.vborderpx,
+		xclear(0, (y == 0)? 0 : winy, win.hborderpx,
 			winy + win.ch +
 			((winy + win.ch >= win.vborderpx + win.th)? win.h : 0));
 	}
@@ -1585,6 +1585,7 @@ xdrawcursor(int cx, int cy, Glyph g, int ox, int oy, Glyph og)
 		case 1: /* blinking block (default) */
 			if (IS_SET(MODE_BLINK))
 				break;
+			/* FALLTHROUGH */
 		case 2: /* steady block */
 			xdrawglyph(g, cx, cy);
 			break;
@@ -1608,7 +1609,7 @@ xdrawcursor(int cx, int cy, Glyph g, int ox, int oy, Glyph og)
 					win.hborderpx + cx * win.cw,
 					win.vborderpx + cy * win.ch,
 					cursorthickness, win.ch);
-			break;
+			break;		
 		case 7: /* blinking st cursor */
 			if (IS_SET(MODE_BLINK))
 				break;
@@ -1617,7 +1618,7 @@ xdrawcursor(int cx, int cy, Glyph g, int ox, int oy, Glyph og)
 			g.u = stcursor;
 			xdrawglyph(g, cx, cy);
 			break;
-		}
+ 		}
 	} else {
 		XftDrawRect(xw.draw, &drawcol,
 				win.hborderpx + cx * win.cw,
@@ -1774,8 +1775,8 @@ int
 xsetcursor(int cursor)
 {
 	if (!BETWEEN(cursor, 0, 8)) /* 7-8: st extensions */
-		return 1;
-	win.cursor = cursor;
+ 		return 1;
+ 	win.cursor = cursor;
 	cursorblinks = win.cursor == 0 || win.cursor == 1 ||
 	               win.cursor == 3 || win.cursor == 5 ||
 	               win.cursor == 7;
